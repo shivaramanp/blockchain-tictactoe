@@ -176,7 +176,7 @@ contract TicTacToeGame is Ownable {
             g.isRunning = false;
             delete userActiveGame[g.player1];
             delete userActiveGame[g.player2];
-            emit WinnerDecleared(_gameId, from);
+            emit WinnerDeclared(_gameId, from);
             rooms[g.roomId].payToken.transferFrom(
                 address(this),
                 g.turn,
